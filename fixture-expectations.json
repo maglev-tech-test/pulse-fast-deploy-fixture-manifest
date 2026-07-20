@@ -1,0 +1,51 @@
+{
+  "schema": "pulse.fast_deploy.fixture-expectations/v1",
+  "organization": "maglev-tech-test",
+  "updated_at": "2026-07-20T00:00:00Z",
+  "upstream_read_only_note": "Third-party public samples (docker/awesome-compose, dockersamples/*, etc.) must never receive pushes or PRs.",
+  "scenarios": {
+    "public-single-v1": {
+      "repository": "maglev-tech-test/pulse-fast-deploy-public-single",
+      "visibility": "public",
+      "tag": "fixture/public-single-v1",
+      "commit_sha": "33869359b9ade9becca6c9f0b67a48ff265ce789",
+      "compose_path": "compose.yaml",
+      "url": "https://github.com/maglev-tech-test/pulse-fast-deploy-public-single",
+      "notes": "Single non-root HTTP service happy path"
+    },
+    "compose-rejections": {
+      "repository": "maglev-tech-test/pulse-fast-deploy-compose-rejections",
+      "visibility": "public",
+      "compose_path_glob": "cases/*.compose.yaml",
+      "url": "https://github.com/maglev-tech-test/pulse-fast-deploy-compose-rejections",
+      "notes": "Each case must fail closed"
+    },
+    "external-image": {
+      "repository": "maglev-tech-test/pulse-fast-deploy-external-image",
+      "visibility": "public",
+      "compose_path": "compose.yaml",
+      "url": "https://github.com/maglev-tech-test/pulse-fast-deploy-external-image",
+      "notes": "External image by tag; deploy by customer digest only"
+    }
+  },
+  "upstream_compatibility_candidates_read_only": [
+    {
+      "repository": "docker/awesome-compose",
+      "url": "https://github.com/docker/awesome-compose",
+      "pinned_commit": "30f4b7f6a6c3b0c0ecf4d4efb0de203c48d11562",
+      "write_policy": "read_only_never_push"
+    },
+    {
+      "repository": "dockersamples/example-voting-app",
+      "url": "https://github.com/dockersamples/example-voting-app",
+      "pinned_commit": "63e9150ca17af4ed05880d4245e486481f73fcb4",
+      "write_policy": "read_only_never_push"
+    },
+    {
+      "repository": "docker/getting-started-todo-app",
+      "url": "https://github.com/docker/getting-started-todo-app",
+      "pinned_commit": "55680777bc46c59d3fe0ab9ff7e79ee947d0c757",
+      "write_policy": "read_only_never_push"
+    }
+  ]
+}
