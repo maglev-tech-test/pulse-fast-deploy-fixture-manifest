@@ -1,7 +1,7 @@
 {
   "schema": "pulse.fast_deploy.fixture-expectations/v1",
   "organization": "maglev-tech-test",
-  "updated_at": "2026-07-20T00:00:00Z",
+  "updated_at": "2026-07-21T00:00:00Z",
   "upstream_read_only_note": "Third-party public samples (docker/awesome-compose, dockersamples/*, etc.) must never receive pushes or PRs.",
   "scenarios": {
     "public-single-v1": {
@@ -26,6 +26,19 @@
       "compose_path": "compose.yaml",
       "url": "https://github.com/maglev-tech-test/pulse-fast-deploy-external-image",
       "notes": "External image by tag; deploy by customer digest only"
+    },
+    "integrator-unity-basic-v2": {
+      "repository": "maglev-tech-test/pulse-integrator-unity-basic",
+      "github_repository_id": 1308095160,
+      "visibility": "private",
+      "tag": "pulse-integrator-fixture-v2",
+      "commit_sha": "a0c4085099519ee69d3022cba1a067a40961ddae",
+      "tree_sha": "f587ef372eb96fca5f0e62aa365e54ebaff9cc47",
+      "unity_editor_version": "6000.0.65f1",
+      "package_lock_sha256": "583a376cb67694d5d51d268824152e9aaa05fba4dda318d8c2c5c11b55130964",
+      "url": "https://github.com/maglev-tech-test/pulse-integrator-unity-basic",
+      "acquisition": "github_app_contents_metadata_read_only_exact_commit",
+      "notes": "Basic Unity EditMode fixture for Fast Deploy acquisition followed by Integrator Gitea adaptation; never mutate this source during a run"
     }
   },
   "upstream_compatibility_candidates_read_only": [
